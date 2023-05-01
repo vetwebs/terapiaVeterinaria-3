@@ -79,9 +79,45 @@
         <div style="background-color: rgba(205, 233, 223, 0.253); padding: 5px; border-radius: 10px;">
             <p><strong style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Exemplo</strong><br>Um cão de 20kg precisa de 15 mg/kg de uma solução a 20%<br>20 kg X 15 mg = 300mg (dose total necessária)<br>Concentração da solução = 20% X 10 = 200 mg/ mL necessários = 300mg/200mg/mL = 1,5 mL.</p>
          </div>
+<!---------Calculo Mililitros (ML) e concentração Necessário---->
+         <div style="display: flex ; flex-direction: column; margin: 0 20% 0 20%;"> 
+            <label for="peso">Peso (kg):</label>
+                <input type="number" id="peso" name="peso">
+
+                <label for="mgkg">Mg/kg necessário:</label>
+                <input type="number" id="mgkg" name="mgkg">
+
+                <label for="concentracao">Concentração da solução (%):</label>
+                <input type="number" id="concentracao" name="concentracao">
+
+                <button id="calcular" style="margin: 5px; ">Calcular</button>
+
+                <label for="dose_necessaria">Dose necessária (mg):</label>
+                <input type="number" id="dose_necessaria" name="dose_necessaria" readonly>
+
+                <label for="mgml_necessario">Mg/mL necessário:</label>
+                <input type="number" id="mgml_necessario" name="mgml_necessario" readonly>
+
+                <label for="ml_necessario" style="font-weight: bold;">Resultado em mL:</label>
+                <input type="number" id="ml_necessario" name="ml_necessario" readonly>
+         </div>
+         <br><br><br>
+<!---- Calculo comprimidos necessários-->
+        <h1 style="font-size: 18px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: rgb(59, 13, 102);">Como Calcular os Comprimidos Necessários</h1>
+            <p>Dose (mg/kg) X quilogramas de peso corporal = dose total necessária (mg)
+            <div style="display: flex; justify-content: center; flex-direction: column; align-items: center; font-weight: bold; padding: 5px;">
+                <p>Dose total necessária<br>_______________= Nº comprimidos necessário<br>Concentração do comprimido</p>
+            </div>
+            <div style="background-color: rgba(205, 233, 223, 0.253); padding: 5px; border-radius: 10px;">
+                <p><strong style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Exemplo</strong><br>Um cão de 20kg precisa de 12 mg/kg.<br>O comprimido tem 100mg.<br>20 kg X 12 mg/kg = 240mg (dose total necessária)<br>240mg/comprimido de 100mg = 2,4 comprimidos.<br>(Na maioria dos casos, arredonda-se para 2,5 comprimidos caso a medicação seja suficiente segura)</p>
+            </div>
+<!---------Calculo comprimidos Necessário---->
     </div>
     
 </main>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous">
+    </script>
+    <script src="./JS/calculo.js"></script>
+    
   </body>
 </html>
