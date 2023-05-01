@@ -55,7 +55,6 @@
                 <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="/mais/calculo.html">Calculo de doses</a></li>
                     <li><a class="dropdown-item" href="./referencia.html">Referência para a Prescrição Escrita</a></li>
-                    <li><a class="dropdown-item" href="#">Tabela de substâncias controladas</a></li>
                     <li><a class="dropdown-item" href="/mais/medicamentos-proibidos.html">Medicamentos proibidos p/ animais de produção</a></li>
                     <li><a class="dropdown-item" href="/mais/infSobreConversao.html">Informações sobre Conversão</a></li>
                     <li><a class="dropdown-item" href="./isencaoDeResp.html">Isenção de Responsabilidade</a></li>
@@ -84,21 +83,15 @@
          <div style="display: flex ; flex-direction: column; margin: 0 20% 0 20%;"> 
             <label for="peso">Peso (kg):</label>
                 <input type="number" id="peso" name="peso">
-
                 <label for="mgkg">Mg/kg necessário:</label>
                 <input type="number" id="mgkg" name="mgkg">
-
                 <label for="concentracao">Concentração da solução (%):</label>
                 <input type="number" id="concentracao" name="concentracao">
-
                 <button id="calcular" style="margin: 5px; ">Calcular</button>
-
                 <label for="dose_necessaria">Dose necessária (mg):</label>
                 <input type="number" id="dose_necessaria" name="dose_necessaria" readonly>
-
                 <label for="mgml_necessario">Mg/mL necessário:</label>
                 <input type="number" id="mgml_necessario" name="mgml_necessario" readonly>
-
                 <label for="ml_necessario" style="font-weight: bold;">Resultado em mL:</label>
                 <input type="number" id="ml_necessario" name="ml_necessario" readonly>
          </div>
@@ -113,6 +106,17 @@
                 <p><strong style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Exemplo</strong><br>Um cão de 20kg precisa de 12 mg/kg.<br>O comprimido tem 100mg.<br>20 kg X 12 mg/kg = 240mg (dose total necessária)<br>240mg/comprimido de 100mg = 2,4 comprimidos.<br>(Na maioria dos casos, arredonda-se para 2,5 comprimidos caso a medicação seja suficiente segura)</p>
             </div>
 <!---------Calculo comprimidos Necessário---->
+    <div style="display: flex ; flex-direction: column; margin: 0 20% 0 20%;"> 
+        <label for="peso-animal">Peso do animal (kg):</label>
+        <input type="number" id="peso-animal" name="peso-animal">
+        <label for="dose-mgkg">Dose necessária (mg/kg):</label>
+        <input type="number" id="dose-mgkg" name="dose-mgkg">
+        <label for="mg-comprimido">Quantidade de mg por comprimido:</label>
+        <input type="number" id="mg-comprimido" name="mg-comprimido"><br>
+        <input type="button" value="Calcular" onclick="calcularDose()"><br>
+        <input type="number" id="dose-necessaria" name="dose-necessaria" readonly style="display: none;">
+        <label for="num-comprimidos">Número de comprimidos:</label>
+        <input type="number" id="num-comprimidos" name="num-comprimidos" readonly>
     </div>
 </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous">

@@ -19,3 +19,15 @@ function calcularResultado() {
   const mlNecessarioCalculado = mgmlNecessarioCalculado !== 0 ? doseNecessariaCalculada / mgmlNecessarioCalculado : 0;
   mlNecessario.value = mlNecessarioCalculado;
 }
+//Calculo comprimidos necessários
+function calcularDose() {
+  var pesoAnimal = document.getElementById("peso-animal").value;
+  var doseMgKg = document.getElementById("dose-mgkg").value;
+  var mgComprimido = document.getElementById("mg-comprimido").value;
+  
+  var doseNecessaria = pesoAnimal * doseMgKg;
+  var numComprimidos = doseNecessaria / mgComprimido;
+  
+  document.getElementById("dose-necessaria").value = doseNecessaria.toFixed(2) + " mg";
+  document.getElementById("num-comprimidos").value = numComprimidos.toFixed(2);
+}
