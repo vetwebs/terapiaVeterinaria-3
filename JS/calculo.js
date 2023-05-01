@@ -1,4 +1,4 @@
-//Calculo MILILITROS e concentração necessário
+//Calculo mililitros e concentração necessário
 const peso = document.getElementById('peso');
 const mgkg = document.getElementById('mgkg');
 const concentracao = document.getElementById('concentracao');
